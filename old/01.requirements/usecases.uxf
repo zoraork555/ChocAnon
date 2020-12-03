@@ -1,0 +1,54 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLGeneric</id><coordinates><x>140</x><y>12</y><w>710</w><h>570</h></coordinates><panel_attributes>**ChocAn Data Processing System**</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>880</x><y>102</y><w>60</w><h>110</h></coordinates><panel_attributes>Provider</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>50</x><y>432</y><w>60</w><h>110</h></coordinates><panel_attributes>Manager</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>870</x><y>432</y><w>80</w><h>120</h></coordinates><panel_attributes>Process
+Scheduler</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>40</x><y>172</y><w>80</w><h>110</h></coordinates><panel_attributes>Operators</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>700</x><y>52</y><w>120</w><h>40</h></coordinates><panel_attributes>Verify Membership</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>700</x><y>122</y><w>120</w><h>40</h></coordinates><panel_attributes>Record
+Service Provided</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>510</x><y>112</y><w>120</w><h>60</h></coordinates><panel_attributes>Look Up Service
+By Service Code</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>122</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>82</y><w>90</w><h>60</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>700</x><y>182</y><w>120</w><h>40</h></coordinates><panel_attributes>Request
+Provider Directory</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>600</x><y>442</y><w>150</w><h>60</h></coordinates><panel_attributes>Run Main
+Accounting Procedure</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>610</x><y>352</y><w>120</w><h>40</h></coordinates><panel_attributes>Produce EFT Data</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>170</x><y>452</y><w>120</w><h>40</h></coordinates><panel_attributes>Manage
+Reports
+group=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>122</y><w>90</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>62</y><w>90</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;70;60</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>152</y><w>90</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;50;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>452</y><w>160</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>382</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>10;60;10;15</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>412</y><w>150</w><h>70</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>130;53;10;15</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>452</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>472</y><w>160</w><h>70</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>140;10;10;50</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>452</y><w>120</w><h>40</h></coordinates><panel_attributes>Generate
+Provider Report
+group=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>452</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=1</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>402</y><w>120</w><h>40</h></coordinates><panel_attributes>Generate
+User Report
+group=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>512</y><w>120</w><h>40</h></coordinates><panel_attributes>Generate
+Summary Report
+group=1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>422</y><w>120</w><h>60</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=1</panel_attributes><additional_attributes>10;40;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>472</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=1</panel_attributes><additional_attributes>10;10;100;50</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>102</y><w>120</w><h>40</h></coordinates><panel_attributes>Update
+Member Record
+group=2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>102</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=2</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>52</y><w>120</w><h>40</h></coordinates><panel_attributes>Add
+Member Record
+group=2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>162</y><w>120</w><h>40</h></coordinates><panel_attributes>Remove
+Member Record
+group=2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>72</y><w>120</w><h>60</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=2</panel_attributes><additional_attributes>10;40;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>122</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=2</panel_attributes><additional_attributes>10;10;100;50</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>170</x><y>102</y><w>120</w><h>40</h></coordinates><panel_attributes>Manage
+Member Record
+group=2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>122</y><w>100</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;70;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>212</y><w>100</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;80;70</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>272</y><w>120</w><h>40</h></coordinates><panel_attributes>Update
+Provider Record
+group=3</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>272</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=3</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>222</y><w>120</w><h>40</h></coordinates><panel_attributes>Add
+Provider Record
+group=3</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>360</x><y>332</y><w>120</w><h>40</h></coordinates><panel_attributes>Remove
+Provider Record
+group=3</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>242</y><w>120</w><h>60</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=3</panel_attributes><additional_attributes>10;40;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>292</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+group=3</panel_attributes><additional_attributes>10;10;100;50</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>170</x><y>272</y><w>120</w><h>40</h></coordinates><panel_attributes>Manage
+Provider Record
+group=3</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>450</y><w>90</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element></diagram>

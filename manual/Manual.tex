@@ -1,0 +1,59 @@
+\documentclass[letterpaper,11pt]{article}
+
+%margins
+\usepackage[letterpaper, margin=0.5in]{geometry}
+
+% code formatting
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+	frame=tlrb,
+	numbers=left,
+	basicstyle=\ttfamily,
+	keywordstyle=\bfseries\color{purple!40!black},
+	commentstyle=\itshape\color{green!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+	escapeinside=||,
+}
+
+\begin{document}
+
+\title{\vspace{-1.7cm}\textbf{CS 200 Fall 2020 Team 7 Project 4}}
+\author{
+	Raymond Arndorfer
+	\and 
+	Cara Cannarozzi
+	\and 
+	Ashton Johnson
+	\and 
+	Noah Overcash	
+	\and 
+	Peter Zhang	
+}
+\date{}
+\maketitle
+
+\vspace{-.5cm}
+
+\section*{Building the ChocAn System}
+
+This project uses Apache ant to manage building, testing, and the generation of Javadoc.  Below are the important build targets and their purposes:
+
+\begin{itemize}
+	\item \textbf{\texttt{clean}} Delete all build artifacts, test logs, and generated javadocs.
+	\item \textbf{\texttt{manager-jar}} Package the application for managers into \texttt{release/manager.jar}.
+	\item \textbf{\texttt{operator-jar}} Package the application for operators into \texttt{release/operator.jar}.
+	\item \textbf{\texttt{provider-jar}} Package the application for providers into \texttt{release/provider.jar}.
+	\item \textbf{\texttt{scheduler-jar}} Package the scheduler application into \texttt{release/scheduler.jar}.
+	\item \textbf{\texttt{release}} Create all four above JAR applications.
+	\item \textbf{\texttt{test}} Run all JUnit tests and create an aggregate report in \texttt{tests-output/junit-noframes.html}.
+	\item \textbf{\texttt{javadoc}} Generate all Javadoc into the \texttt{doc} folder.
+	\item \texttt{all} Do all of the above tasks.
+\end{itemize}
+
+\section*{Running the applications}
+
+To run the applications, simply open a terminal in the project's main folder and run \texttt{java -jar release/sample.jar} where \texttt{sample.jar} is the JAR you wish to run.  Make sure you complete the ant build steps before this.
+
+\end{document}
