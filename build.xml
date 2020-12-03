@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="all" name="cs200fall2020team7">
+  <property environment="env"/>
+  <property name="debuglevel" value="source,lines,vars"/>
+  <property name="target" value="14"/>
+  <property name="source" value="14"/>
+  <path id="classpath">
+    <pathelement location="bin"/>
+    <pathelement location="lib/org.junit.jupiter.api_5.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.jupiter.engine_5.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.jupiter.migrationsupport_5.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.jupiter.params_5.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.platform.commons_1.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.platform.engine_1.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.platform.launcher_1.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.platform.runner_1.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.platform.suite.api_1.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.junit.vintage.engine_5.6.0.v20200203-2009.jar"/>
+    <pathelement location="lib/org.opentest4j_1.2.0.v20190826-0900.jar"/>
+    <pathelement location="lib/org.apiguardian_1.1.0.v20190826-0900.jar"/>
+    <pathelement location="lib/org.junit_4.13.0.v20200204-1500.jar"/>
+    <pathelement location="lib/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+    <pathelement location="lib/sqlite-jdbc-3.32.3.2.jar"/>
+    <pathelement location="lib/jgoodies-forms-1.8.0.jar"/>
+    <pathelement location="lib/miglayout15-swing.jar"/>
+  </path>
+  <target name="init" description="Create the needed build/release folders">
+      <mkdir dir="release"/>
+      <mkdir dir="bin"/>
+  </target>
+  
+  <target name="compile" depends="init" description="compile the source .java to .class">
+    <javac includeantruntime="false" srcdir="src" destdir="bin">
+      <classpath refid="classpath" />
+    </javac>
+  </target>
+
+  <target name="manager-jar" depends="compile" description="Create the manager JAR file">
+    <jar filesetmanifest="mergewithoutmain" destfile="release/manager.jar">
+      <manifest>
+        <attribute name="Main-Class" value="edu.ua.cs.cs200.fall2020.team7.ManagerTerminal" />
+        <attribute name="Class-Path" value="."/>
+      </manifest>
+      <fileset dir="bin"/>
+      <zipfileset excludes="META-INF/*.SF" src="lib/jgoodies-forms-1.8.0.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/miglayout15-swing.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/sqlite-jdbc-3.32.3.2.jar" />
+    </jar>
+  </target>
+  <target name="operator-jar" depends="compile" description="Create the operator JAR file">
+    <jar filesetmanifest="mergewithoutmain" destfile="release/operator.jar">
+      <manifest>
+        <attribute name="Main-Class" value="edu.ua.cs.cs200.fall2020.team7.OperatorTerminal" />
+        <attribute name="Class-Path" value="."/>
+      </manifest>
+      <fileset dir="bin"/>
+      <zipfileset excludes="META-INF/*.SF" src="lib/jgoodies-forms-1.8.0.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/miglayout15-swing.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/sqlite-jdbc-3.32.3.2.jar" />
+    </jar>
+  </target>
+  <target name="provider-jar" depends="compile" description="Create the provider JAR file">
+    <jar filesetmanifest="mergewithoutmain" destfile="release/provider.jar">
+      <manifest>
+        <attribute name="Main-Class" value="edu.ua.cs.cs200.fall2020.team7.ProviderTerminal" />
+        <attribute name="Class-Path" value="."/>
+      </manifest>
+      <fileset dir="bin"/>
+      <zipfileset excludes="META-INF/*.SF" src="lib/jgoodies-forms-1.8.0.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/miglayout15-swing.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/sqlite-jdbc-3.32.3.2.jar" />
+    </jar>
+  </target>
+  <target name="scheduler-jar" depends="compile" description="Create the scheduler JAR file">
+    <jar filesetmanifest="mergewithoutmain" destfile="release/scheduler.jar">
+      <manifest>
+        <attribute name="Main-Class" value="edu.ua.cs.cs200.fall2020.team7.Scheduler" />
+        <attribute name="Class-Path" value="."/>
+      </manifest>
+      <fileset dir="bin"/>
+      <zipfileset excludes="META-INF/*.SF" src="lib/jgoodies-forms-1.8.0.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/miglayout15-swing.jar" />
+      <zipfileset excludes="META-INF/*.SF" src="lib/sqlite-jdbc-3.32.3.2.jar" />
+    </jar>
+  </target>
+  
+  <target name="release" depends="compile,manager-jar,operator-jar,provider-jar,scheduler-jar" description="Create the JAR files for distribution/release">
+  </target>
+
+  <target name="test" depends="clean,compile">
+      <mkdir dir="tests-output"/>
+      <mkdir dir="tests-output/raw"/>
+      <junitlauncher printSummary="true">
+          <testclasses outputdir="tests-output/raw">
+            <fileset dir="bin">
+              <include name="**/team7test/*"/>
+            </fileset>
+            <listener type="legacy-xml" sendSysOut="true" sendSysErr="true"/>
+            <listener type="legacy-plain" sendSysOut="true" />
+          </testclasses>
+          <classpath refid="classpath" />
+      </junitlauncher>
+      <junitreport todir="tests-output">
+          <fileset dir="tests-output/raw">
+              <include name="TEST-*.xml"/>
+          </fileset>
+          <report format="noframes" todir="tests-output"/>
+      </junitreport>
+      <echo message="Look in `tests-output/junit-noframes.html` for the test results" />
+  </target>
+
+  <target name="javadoc" depends="init" description="Generate javadoc">
+    <mkdir dir="doc"/>
+    <javadoc packagenames="edu.ua.cs.cs200.fall2020.team7" sourcepath="src" destdir="doc">
+        <classpath refid="classpath" />
+    </javadoc>
+  </target>
+  
+  <target name="clean" description="Remove build/release artifacts">
+      <delete dir="doc"/>
+      <delete dir="release"/>
+      <delete dir="tests-output"/>
+      <delete dir="bin"/>
+  </target>
+
+  <target name="all" description="Cleans the build then compiles, makes jars, runs tests, and generates javadoc" depends="clean,release,test,javadoc" />
+</project>

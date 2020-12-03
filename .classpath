@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/org.junit.jupiter.api_5.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.jupiter.engine_5.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.jupiter.migrationsupport_5.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.jupiter.params_5.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.platform.commons_1.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.platform.engine_1.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.platform.launcher_1.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.platform.runner_1.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.platform.suite.api_1.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit.vintage.engine_5.6.0.v20200203-2009.jar"/>
+	<classpathentry kind="lib" path="lib/org.opentest4j_1.2.0.v20190826-0900.jar"/>
+	<classpathentry kind="lib" path="lib/org.apiguardian_1.1.0.v20190826-0900.jar"/>
+	<classpathentry kind="lib" path="lib/org.junit_4.13.0.v20200204-1500.jar"/>
+	<classpathentry kind="lib" path="lib/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+	<classpathentry kind="lib" path="lib/jgoodies-forms-1.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout15-swing.jar"/>
+	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.32.3.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
